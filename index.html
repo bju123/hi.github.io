@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>anonymous💕</title>
+
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+      font-family: cursive, cursive,
+    }
+
+    .card {
+      background: white;
+      padding: 30px;
+      width: 330px;
+      border-radius: 18px;
+      text-align: center;
+      box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+    }
+
+    h2 {
+      color: #ff4d6d;
+      margin-bottom: 15px;
+    }
+
+    input {
+      width: 90%;
+      padding: 10px;
+      border-radius: 10px;
+      border: 1px solid #ccc;
+      font-size: 16px;
+    }
+
+    button {
+      width: 95%;
+      margin-top: 10px;
+      padding: 12px;
+      border-radius: 12px;
+      border: none;
+      background: #ff4d6d;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #ff2d55;
+    }
+
+    .message {
+      margin-top: 15px;
+      font-size: 18px;
+      color: #ff2d55;
+      min-height: 120px;
+      white-space: pre-line;
+    }
+  </style>
+</head>
+<body>
+
+<div class="card">
+  <h2>Type Your Name 💖</h2>
+  <input type="text" id="name" placeholder="Your name">
+  <button onclick="startConfession()">Continue</button>
+
+  <div class="message" id="text"></div>
+</div>
+
+<script>
+  function startConfession() {
+    const name = document.getElementById("name").value.trim();
+    if (name === "") {
+      alert("Please type your name 😊");
+      return;
+    }
+
+    const message = `Hi ${name} 💕
+    
+    
+    
+    
+    
+    
+    
+Hello po, Ate Hannah! I have created this anonymous account for me not to recognize so don't be creeped out po, i have good intentions naman po huhu ^^
+‎
+‎ First of all, we may not know each other po, but since when we started practicing our yell for Foundation Week, I have noticed you po. I was undeniably mesmerized by your goddess beauty from your hair to toe. (may pitik ka te)
+‎
+‎ When I first saw you po, I was admittedly intimidated because of how you looked and how you spoke to us and it was calmlesly cool. However, I also saw how hands-on you were in handling us from yell to props the whole Foundation week. Honestly, I really admire and appreciate you po and have looked up to you ever since—not just because of that moment, but because of the kind of person I believe you are in real life.
+‎
+‎ I hope to get to know you better po, Ate Hannah! Keep being intimidating, but with the purest heart, because I know you have that, Ate Mayor, hehe. Hope to see you around the campus po, ate, or sa hallway nalang HAHHAHAHA
+‎
+‎ Merry Christmas po and Happy Holiday's, ate Hannah!! ^°^💗`;
+
+    const speed = 50; // smaller = faster typing
+    let i = 0;
+    const textDiv = document.getElementById("text");
+    textDiv.textContent = "";
+
+    const typing = setInterval(() => {
+      if (i < message.length) {
+        textDiv.textContent += message.charAt(i);
+        i++;
+      } else {
+        clearInterval(typing);
+      }
+    }, speed);
+  }
+</script>
+
+</body>
+</html>
